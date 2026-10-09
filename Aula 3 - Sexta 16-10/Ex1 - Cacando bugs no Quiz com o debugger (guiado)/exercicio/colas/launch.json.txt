@@ -1,0 +1,22 @@
+// COLA — Plano B: conteúdo do .vscode/launch.json (o professor cola ao vivo)
+// Como criar o arquivo: aba "Run and Debug" (Ctrl+Shift+D) > "create a launch.json file" > Node.js
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Depurar Quiz da Copa",
+      "program": "${workspaceFolder}/index.js",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Depurar Quiz WEB no Edge",
+      "url": "http://127.0.0.1:5500/index.html",
+      "webRoot": "${workspaceFolder}/web"
+    }
+  ]
+}

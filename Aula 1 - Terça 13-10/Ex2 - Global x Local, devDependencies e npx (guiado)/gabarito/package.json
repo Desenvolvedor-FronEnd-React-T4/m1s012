@@ -1,0 +1,16 @@
+{
+  "name": "saudacao-copa",
+  "version": "1.0.0",
+  "description": "Ex2: global x local, devDependencies e npx",
+  "main": "saudacao.js",
+  "scripts": {
+    "start": "node saudacao.js",
+    "dev": "nodemon saudacao.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

@@ -1,0 +1,5 @@
+Pos  Seleção   P  J  GP  GC  SG
+1    Japão     4  3  4   3   +1
+2    Brasil    4  3  3   3   0
+3    Egito     4  3  3   4   -1
+4    México    3  3  3   3   0

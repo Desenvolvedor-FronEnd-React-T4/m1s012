@@ -1,0 +1,2 @@
+# Pasta de pacotes: pesada e recriada com "npm install" — nunca vai para o Git nem para o ZIP
+node_modules/

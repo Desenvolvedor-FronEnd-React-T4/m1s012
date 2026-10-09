@@ -1,0 +1,13 @@
+// COLA — .vscode/launch.json para o auditor (não precisa de console integrado: não há digitação)
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Depurar auditor",
+      "program": "${workspaceFolder}/auditor.js",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

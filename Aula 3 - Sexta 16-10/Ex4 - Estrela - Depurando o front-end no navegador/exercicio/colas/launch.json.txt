@@ -1,0 +1,20 @@
+// COLA — .vscode/launch.json para depurar o FRONT-END (precisa do Live Server rodando em 127.0.0.1:5500)
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Depurar no Edge (Live Server)",
+      "url": "http://127.0.0.1:5500/index.html",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Depurar no Chrome (Live Server)",
+      "url": "http://127.0.0.1:5500/index.html",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

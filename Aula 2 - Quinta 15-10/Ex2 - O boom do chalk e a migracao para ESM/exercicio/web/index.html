@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz da Copa 2026</title>
+  <meta name="description" content="Quiz da Copa do Mundo 2026: 10 perguntas, a mesma lista do quiz do terminal.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="pular" href="#quiz">Pular para o quiz</a>
+  <header class="topo">
+    <h1>⚽ Quiz da Copa 2026</h1>
+    <p class="sub">As mesmas perguntas do quiz do terminal — agora no navegador.</p>
+  </header>
+
+  <main id="quiz" class="cartao">
+    <p class="progresso" id="progresso" aria-live="polite"></p>
+    <div class="barra" aria-hidden="true"><div class="barra-cheia" id="barra"></div></div>
+
+    <form id="form-pergunta">
+      <fieldset>
+        <legend id="enunciado"></legend>
+        <div id="opcoes" class="opcoes"></div>
+      </fieldset>
+      <button type="submit" id="botao">Responder</button>
+    </form>
+
+    <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+
+    <section id="final" class="final" hidden>
+      <h2>Fim de jogo!</h2>
+      <p id="mensagem-final"></p>
+      <p id="classificacao"></p>
+      <button type="button" id="recomecar">Jogar de novo</button>
+    </section>
+  </main>
+
+  <footer class="rodape">Desenvolvimento Front-End [React] T4 — SENAI/SC · M1S12</footer>
+  <script src="quiz.js"></script>
+</body>
+</html>

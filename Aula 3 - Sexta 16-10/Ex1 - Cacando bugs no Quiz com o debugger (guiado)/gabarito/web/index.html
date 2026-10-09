@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- index.html — GABARITO COMENTADO. Semântico e acessível (S11): landmarks, label/legend, aria-live, skip link. -->
+<!-- lang diz ao leitor de tela e ao navegador o idioma da página -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport: obrigatório para a página se ajustar ao celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz da Copa 2026</title>
+  <!-- description: resumo que o Google pode mostrar (SEO) -->
+  <meta name="description" content="Quiz da Copa do Mundo 2026: 10 perguntas, a mesma lista do quiz do terminal.">
+  <link rel="icon" href="data:,">
+  <!-- liga o CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- primeiro Tab: pula direto para o conteúdo -->
+  <a class="pular" href="#quiz">Pular para o quiz</a>
+  <!-- header: cabeçalho da página; UM só h1 -->
+  <header class="topo">
+    <h1>⚽ Quiz da Copa 2026</h1>
+    <p class="sub">As mesmas perguntas do quiz do terminal — agora no navegador.</p>
+  </header>
+
+  <!-- main: o conteúdo principal (um só por página) -->
+  <main id="quiz" class="cartao">
+    <!-- aria-live="polite": o leitor de tela anuncia quando o texto mudar -->
+    <p class="progresso" id="progresso" aria-live="polite"></p>
+    <!-- decorativa: aria-hidden esconde do leitor de tela (o texto acima já informa o progresso) -->
+    <div class="barra" aria-hidden="true"><div class="barra-cheia" id="barra"></div></div>
+
+    <!-- form: o JavaScript escuta o evento submit (Enter também funciona) -->
+    <form id="form-pergunta">
+      <!-- fieldset + legend: agrupam as alternativas e dão nome ao grupo para o leitor de tela -->
+      <fieldset>
+        <legend id="enunciado"></legend>
+        <div id="opcoes" class="opcoes"></div>
+      </fieldset>
+      <button type="submit" id="botao">Responder</button>
+    </form>
+
+    <!-- role="status": mensagem de Acertou/Errou anunciada sem tirar o foco -->
+    <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+
+    <!-- hidden: escondida até o fim do jogo -->
+    <section id="final" class="final" hidden>
+      <h2>Fim de jogo!</h2>
+      <p id="mensagem-final"></p>
+      <p id="classificacao"></p>
+      <button type="button" id="recomecar">Jogar de novo</button>
+    </section>
+  </main>
+
+  <footer class="rodape">Desenvolvimento Front-End [React] T4 — SENAI/SC · M1S12</footer>
+  <!-- type="module": permite import/export no navegador (exige servidor HTTP: npm run web) -->
+  <script type="module" src="quiz.js"></script>
+</body>
+</html>

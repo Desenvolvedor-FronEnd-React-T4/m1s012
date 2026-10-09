@@ -1,0 +1,24 @@
+{
+  // Configurações para depurar o FRONT-END. Pré-requisito: Live Server rodando (botão "Go Live").
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // "msedge" abre o Microsoft Edge sob controle do VS Code (use "chrome" para o Google Chrome).
+      "type": "msedge",
+      // "launch" abre uma janela nova do navegador em modo de depuração.
+      "request": "launch",
+      "name": "Depurar no Edge (Live Server)",
+      // Endereço da página servida pelo Live Server.
+      "url": "http://127.0.0.1:5500/index.html",
+      // Pasta que corresponde à raiz do site: liga os arquivos do navegador aos do VS Code (para os breakpoints casarem).
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Depurar no Chrome (Live Server)",
+      "url": "http://127.0.0.1:5500/index.html",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "classificacao-grupo",
+  "version": "1.0.0",
+  "description": "Tarefa da Aula 3: ache os bugs com o debugger",
+  "type": "module",
+  "scripts": {
+    "start": "node classificacao.js"
+  },
+  "license": "ISC"
+}

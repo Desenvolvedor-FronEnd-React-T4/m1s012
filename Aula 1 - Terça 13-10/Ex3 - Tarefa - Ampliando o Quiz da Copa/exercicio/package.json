@@ -1,0 +1,14 @@
+{
+  "name": "quiz-copa-ampliado",
+  "version": "1.0.0",
+  "description": "Tarefa da Aula 1: ampliando o Quiz da Copa",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "prompt-sync": "^4.2.0"
+  }
+}

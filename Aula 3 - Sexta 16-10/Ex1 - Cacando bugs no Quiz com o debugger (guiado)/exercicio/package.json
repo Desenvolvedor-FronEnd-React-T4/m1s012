@@ -1,0 +1,16 @@
+{
+  "name": "quiz-copa-bugado",
+  "version": "1.0.0",
+  "description": "Quiz da Copa com bugs plantados para a aula de debugger (M1S12)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "web": "npx -y http-server web -p 5500 -c-1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^6.0.1",
+    "prompt-sync": "^4.2.0"
+  }
+}

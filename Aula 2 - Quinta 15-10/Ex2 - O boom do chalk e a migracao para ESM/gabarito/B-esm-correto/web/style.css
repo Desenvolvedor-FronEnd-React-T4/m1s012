@@ -1,0 +1,55 @@
+/* ============================================================
+   style.css — GABARITO COMENTADO
+   Variáveis CSS (:root) guardam a paleta num lugar só (S10); mobile-first com min-width (S10);
+   :focus-visible e prefers-reduced-motion (acessibilidade, S10/S11).
+   ============================================================ */
+/* paleta da Copa: verdes do campo e amarelo da taça */
+:root {
+  --verde-campo: #1b5e20;
+  --verde-folha: #2e7d32;
+  --amarelo: #ffb300;
+  --fundo: #0f2a14;
+  --cartao: #ffffff;
+  --texto: #1d2b20;
+  --erro: #b3261e;
+}
+/* border-box: largura inclui borda e padding (cálculo mais previsível) */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--fundo); color: var(--texto); line-height: 1.5; }
+/* skip link: fica fora da tela e aparece ao receber foco do teclado (Tab) */
+.pular { position: absolute; left: -999px; background: var(--amarelo); color: #000; padding: .5rem 1rem; }
+.pular:focus { left: 0; }
+.topo { text-align: center; padding: 1.5rem 1rem 0; color: #fff; }
+.topo h1 { margin: 0; color: var(--amarelo); }
+.sub { margin: .25rem 0 0; opacity: .9; }
+/* cartão central do quiz; margin auto o centraliza */
+.cartao { max-width: 640px; margin: 1.25rem auto; background: var(--cartao); border-radius: 12px; padding: 1.25rem; }
+.progresso { margin: 0 0 .5rem; font-weight: bold; color: var(--verde-campo); }
+/* trilho da barra de progresso e a parte cheia (a largura vem do JavaScript) */
+.barra { height: 10px; background: #dfe9e0; border-radius: 6px; overflow: hidden; margin-bottom: 1rem; }
+.barra-cheia { height: 100%; width: 0; background: var(--verde-folha); transition: width .3s; }
+fieldset { border: 0; margin: 0; padding: 0; }
+legend { font-size: 1.15rem; font-weight: bold; margin-bottom: .75rem; }
+/* grid com espaço entre as alternativas */
+.opcoes { display: grid; gap: .5rem; }
+.opcao { display: flex; align-items: center; gap: .6rem; padding: .7rem .9rem; border: 2px solid #c8d6c9; border-radius: 8px; cursor: pointer; }
+.opcao:hover { border-color: var(--verde-folha); }
+.opcao input { width: 1.1rem; height: 1.1rem; }
+/* classes aplicadas pelo JavaScript depois da resposta */
+.opcao.certa { border-color: var(--verde-folha); background: #e6f4e7; }
+.opcao.errada { border-color: var(--erro); background: #fdecea; }
+button { margin-top: 1rem; padding: .7rem 1.4rem; font-size: 1rem; font-weight: bold; border: 0; border-radius: 8px; background: var(--verde-campo); color: #fff; cursor: pointer; }
+button:hover { background: var(--verde-folha); }
+button:disabled { opacity: .5; cursor: not-allowed; }
+/* foco visível por teclado: NUNCA remover o outline */
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 2px; }
+.feedback { min-height: 1.5rem; font-weight: bold; }
+.feedback.ok { color: var(--verde-campo); }
+.feedback.nao { color: var(--erro); }
+.final { text-align: center; }
+.final h2 { margin-top: 0; }
+.rodape { text-align: center; color: #b9ccbb; font-size: .8rem; padding-bottom: 1.5rem; }
+/* quem pede menos movimento não vê a transição da barra */
+@media (prefers-reduced-motion: reduce) { .barra-cheia { transition: none; } }
+/* a partir de 700px de largura, mais respiro no cartão (mobile-first) */
+@media (min-width: 700px) { .cartao { padding: 1.75rem; } }

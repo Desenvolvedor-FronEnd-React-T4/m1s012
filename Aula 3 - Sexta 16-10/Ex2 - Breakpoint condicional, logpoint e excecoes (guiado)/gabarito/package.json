@@ -1,0 +1,10 @@
+{
+  "name": "auditor-do-quiz",
+  "version": "1.0.0",
+  "description": "Ex2 da Aula 3: breakpoints condicionais, logpoints e exceções",
+  "type": "module",
+  "scripts": {
+    "start": "node auditor.js"
+  },
+  "license": "ISC"
+}

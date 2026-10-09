@@ -1,0 +1,30 @@
+{
+  // Documento lido pelo VS Code (aceita comentários). É a "RECEITA" de como iniciar o programa em modo de depuração.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Tipo do depurador: "node" = Node.js.
+      "type": "node",
+      // "launch" = o VS Code INICIA o programa. (O outro modo, "attach", se pendura em um programa já rodando.)
+      "request": "launch",
+      // Nome que aparece na lista do botão verde de Run and Debug.
+      "name": "Depurar Quiz da Copa",
+      // Arquivo de entrada. ${workspaceFolder} = a pasta aberta no VS Code (por isso abrimos a pasta certa).
+      "program": "${workspaceFolder}/index.js",
+      // IMPORTANTE: o prompt-sync precisa de um terminal interativo para ler o teclado.
+      // No "Debug Console" (padrão) você não consegue digitar. "integratedTerminal" usa o terminal do VS Code.
+      "console": "integratedTerminal",
+      // Não entra nos arquivos internos do Node ao dar Step into (evita se perder).
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      // FRONT-END: abre o Edge no quiz web. Pré-requisito: "npm run web" rodando em outro terminal (porta 5500).
+      "type": "msedge",
+      "request": "launch",
+      "name": "Depurar Quiz WEB no Edge",
+      "url": "http://127.0.0.1:5500/index.html",
+      // webRoot liga os arquivos do navegador aos da pasta web/ (para os breakpoints do VS Code casarem).
+      "webRoot": "${workspaceFolder}/web"
+    }
+  ]
+}
