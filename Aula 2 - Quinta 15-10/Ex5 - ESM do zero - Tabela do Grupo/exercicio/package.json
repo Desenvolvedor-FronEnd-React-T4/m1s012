@@ -1,0 +1,13 @@
+{
+  "name": "tabela-grupo",
+  "version": "1.0.0",
+  "description": "Tabela de classificação de um grupo da Copa em ESM (M1S12 - Aula 2 - Ex5)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}

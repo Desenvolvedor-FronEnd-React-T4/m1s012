@@ -5,6 +5,7 @@
 | `Ex1 - Modularizando o Quiz com CommonJS` | live coding | ~35 min |
 | `Ex2 - O boom do chalk e a migracao para ESM` | live coding | ~40 min |
 | `Ex3 - CommonJS x ESM lado a lado` | micro-desafio em duplas | ~25 min |
+| `Ex5 - ESM do zero - Tabela do Grupo` | revisão digitada (fecha a aula) | ~25 min |
 | `Ex4 - Tarefa - Ranking com node-fs (ESM)` | tarefa ⭐ | em casa |
 
 Cada exercício tem **`exercicio/`** (ponto de partida) e **`gabarito/`** (comentado linha por linha).
